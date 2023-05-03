@@ -134,7 +134,25 @@ const findAmnimalNorms = (age) => {
 
 ////////////////////////////////// PRESENTATION ///////////////////////////////////
 
-// Logic for presenting (COWA)
+// COWAT
+
+const COWATFInput = document.getElementById("COWATF");
+const COWATAInput = document.getElementById("COWATA");
+const COWATSInput = document.getElementById("COWATS");
+const COWATTotalInput = document.getElementById("COWATTotal");
+
+COWATFInput.addEventListener("input", updateTotal);
+COWATAInput.addEventListener("input", updateTotal);
+COWATSInput.addEventListener("input", updateTotal);
+
+function updateTotal() {
+  const COWATFValue = parseInt(COWATFInput.value) || 0; // default to 0 if NaN
+  const COWATAValue = parseInt(COWATAInput.value) || 0;
+  const COWATSValue = parseInt(COWATSInput.value) || 0;
+  const total = COWATFValue + COWATAValue + COWATSValue;
+  COWATTotalInput.value = total;
+}
+
 submit.addEventListener("click", function () {
   // Obtain patient data
   const age = demographicVariables();
