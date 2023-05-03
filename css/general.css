@@ -1,1 +1,151 @@
-/* Designs */
+/* Global Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 62.5% of default font size of 16px = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #222;
+}
+
+/*********************/
+/* GENERAL REUSABLE STYLES */
+/********************/
+
+.container {
+  max-width: 130rem;
+  padding: 0 9.6rem;
+  margin: 0 auto;
+}
+
+.heading-primary {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 1.6rem 3.2rem;
+
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.heading-secondary {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  font-size: 1.8rem;
+}
+
+/*********************/
+/* NAVIGATION */
+/********************/
+
+.main-nav {
+  height: 9.6rem;
+  padding: 2.4rem 9.6rem;
+}
+
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  text-decoration: none;
+}
+
+/*********************/
+/* ABOUT */
+/********************/
+
+.about-section {
+  margin-bottom: 3.2rem;
+}
+
+.about-description {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*********************/
+/* NORM SECTION */
+/********************/
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 1fr auto;
+  gap: 4rem;
+}
+
+.norm-section .heading-secondary {
+  margin-bottom: 3rem;
+}
+
+.demographic-form,
+.test-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.input-container label {
+  margin-right: 1.4rem;
+}
+
+.test-subscores {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/*********************/
+/* RESULTS SECTION */
+/********************/
+
+.result-box {
+  margin: 1.6rem 0;
+}
+
+.result-heading {
+  margin-bottom: 1.6rem;
+}
+
+.submit-btn {
+  margin-top: 3rem;
+}
+
+/*********************/
+/* TEST SECTION */
+/********************/
+
+.hidden {
+  display: none;
+}

@@ -6,13 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neuropsychological Assessment</title>
 
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS and JS -->
     <link rel="stylesheet" href="css/general.css" />
     <script defer src="js/script.js"></script>
   </head>
+
   <body>
-    <h1>Test</h1>
-    <p>Test 2</p>
-    <p>ABC</p>
+    <!-- Navigation Section -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">About</a></li>
+          <li><a class="main-nav-link" href="#">Input</a></li>
+          <li><a class="main-nav-link" href="#">Description</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <h1 class="heading-primary">Generate your assessment norms</h1>
+      <p class="about-description">
+        Compare your scores with normative data with a click of a button
+      </p>
+    </section>
+
+    <!-- Form Section -->
+    <section class="norm-section container">
+      <div class="input-container">
+        <div class="demographic-container">
+          <h2 class="heading-secondary">Demographic Variables</h2>
+          <form class="demographic-form">
+            <div>
+              <label for="age">Age</label>
+              <input
+                required
+                type="number"
+                name="age"
+                id="age"
+                min="1"
+                max="100"
+                placeholder="65"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="tests-container cognitive-tests">
+          <h2 class="heading-secondary">Cognitive Tests</h2>
+          <form class="test-form">
+            <div>
+              <label for="test-selection">Test</label>
+              <select id="test">
+                <option value="">Please choose one option:</option>
+                <option value="COWAT" data-class="COWAT">COWAT(FAS/Animals)</option>
+              </select>
+            </div>
+          </form>
+        </div>        
+
+      <section class="COWAT hidden">
+        <div class="test-subscores">
+          <label for="COWATF">F</label>
+          <input type="number" name="COWATF" id="COWATF" />
+          <label for="COWATA">A</label>
+          <input type="number" name="COWATA" id="COWATA" />
+          <label for="COWATS">S</label>
+          <input type="number" name="COWATS" id="COWATS" />
+          <label for="COWATTotal">Total</label>
+          <input type="number" name="COWATTotal" id="COWATTotal" />
+          <label for="COWATanimals">Animals</label>
+          <input type="number" name="COWATAnimals" id="COWATAnimals" />
+        </div>
+      </form>
+
+        <div id="result"></div>
+        </div>
+
+        <button class="submit-btn">Submit</button>
+      </div>
+    </section>
+
+    <!-- Details Section: Display details of the test depending on which was selected -->
   </body>
 </html>
